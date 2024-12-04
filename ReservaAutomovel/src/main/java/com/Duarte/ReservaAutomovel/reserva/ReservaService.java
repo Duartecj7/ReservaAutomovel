@@ -34,12 +34,9 @@ public class ReservaService {
      * @param id -> id da reserva
      * @return reserva com o id correspondente
      * @throws RuntimeException se a reserva não for encontrada*/
-    public Reserva getReservaById(UUID id){
+    public Reserva getReservaById(UUID id) {
         return reservaRepository.findById(id)
-                            .orElseThrow(() -> {
-                                String errorMessage = String.format("[ERRO] Reserva com ID %s não encontrada", id);
-                                throw new RuntimeException(errorMessage);
-                            });
+                .orElseThrow(() -> new RuntimeException(String.format("Reserva com ID %s não encontrada", id)));
     }
 
     /**Adiciona uma reserva caso os dados sejam válidos

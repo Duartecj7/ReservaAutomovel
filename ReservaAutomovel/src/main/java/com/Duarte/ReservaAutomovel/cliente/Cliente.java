@@ -3,6 +3,7 @@ package com.Duarte.ReservaAutomovel.cliente;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Version;
 import lombok.Data;
 
 import java.util.UUID;

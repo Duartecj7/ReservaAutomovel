@@ -8,9 +8,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    //  RuntimeException  erro 400 com a mensagem da exceção
+    // Trata RuntimeException, diferencia  erros de validação De recursos não encontrados
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<String> handleRuntimeException(RuntimeException ex) {
+        if (ex.getMessage().contains("não encontrada")) {
+            // Retorna 404 para "não encontrado"
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+        }
+        // Retorna 400 para outros casos
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
