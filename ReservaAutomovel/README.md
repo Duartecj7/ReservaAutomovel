@@ -28,7 +28,7 @@ npm run test
 npm run dev
 
 abra o seu browser e backend está disponivel em 
-localhost:8080/
+http://localhost:8080/
 
 frontend disponivel em 
 http://localhost:3000/
