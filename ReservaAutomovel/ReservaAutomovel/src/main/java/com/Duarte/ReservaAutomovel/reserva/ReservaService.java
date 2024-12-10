@@ -75,9 +75,9 @@ public class ReservaService {
         }
 
         // 3ª validação : DATAINICIO<DATAFIM
-        if (reserva.getDataInicio().isAfter(reserva.getDatafim())) {
+        if (reserva.getDataInicio().isAfter(reserva.getDataFim())) {
             String errorMessage = String.format("[ERRO] A data de início (%s) deve ser anterior à data de fim (%s)",
-                    reserva.getDataInicio(), reserva.getDatafim());
+                    reserva.getDataInicio(), reserva.getDataFim());
             log.error(errorMessage);
             throw new RuntimeException(errorMessage);
         }

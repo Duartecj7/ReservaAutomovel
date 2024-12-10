@@ -46,7 +46,7 @@ public class Reserva {
         return this.dataInicio;
     }
 
-    public LocalDate getDatafim() {
+    public LocalDate getDataFim() {
         return this.dataFim;
     }
 
@@ -88,8 +88,8 @@ public class Reserva {
         final Object other$dataInicio = other.getDataInicio();
         if (this$dataInicio == null ? other$dataInicio != null : !this$dataInicio.equals(other$dataInicio))
             return false;
-        final Object this$datafim = this.getDatafim();
-        final Object other$datafim = other.getDatafim();
+        final Object this$datafim = this.getDataFim();
+        final Object other$datafim = other.getDataFim();
         if (this$datafim == null ? other$datafim != null : !this$datafim.equals(other$datafim)) return false;
         return true;
     }
@@ -109,12 +109,12 @@ public class Reserva {
         result = result * PRIME + ($carro == null ? 43 : $carro.hashCode());
         final Object $dataInicio = this.getDataInicio();
         result = result * PRIME + ($dataInicio == null ? 43 : $dataInicio.hashCode());
-        final Object $datafim = this.getDatafim();
+        final Object $datafim = this.getDataFim();
         result = result * PRIME + ($datafim == null ? 43 : $datafim.hashCode());
         return result;
     }
 
     public String toString() {
-        return "Reserva(id=" + this.getId() + ", cliente=" + this.getCliente() + ", carro=" + this.getCarro() + ", dataInicio=" + this.getDataInicio() + ", datafim=" + this.getDatafim() + ")";
+        return "Reserva(id=" + this.getId() + ", cliente=" + this.getCliente() + ", carro=" + this.getCarro() + ", dataInicio=" + this.getDataInicio() + ", datafim=" + this.getDataFim() + ")";
     }
 }
